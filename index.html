@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg-change</title>
+    <style>
+        .box{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+        }
+        #yellow{
+            background: yellow;
+        }
+        #blue{
+            background: blue;
+        }
+        #red{
+            background: red;
+        }
+        #black{
+            background: #000;
+        }
+        body{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="blue"></div>
+    <div class="box" id="red"></div>
+    <div class=" box" id="black"></div>
+    <div class=" box" id="yellow"></div>
+    
+<script>
+   const buttons=document.querySelectorAll('.box');
+   const body=document.querySelector('body');
+   buttons.forEach((button) =>{
+    console.log(button);
+    button.addEventListener('click',(e)=>{
+        if(e.target.id==='yellow'){
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='black'){
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='blue'){
+            body.style.backgroundColor=e.target.id;
+        }
+        if(e.target.id==='red'){
+            body.style.backgroundColor=e.target.id;
+        }
+    })
+   })
+      
+</script>
+</body>
+</html>
